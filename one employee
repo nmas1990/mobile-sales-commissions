@@ -1,0 +1,67 @@
+//create a program that tracks the commission of an employee.
+
+#include <iostream>
+
+using namespace std;
+
+
+//phones profit 5%
+//phone new lines $10/
+//pbh 20$ per device
+//insurance 10$
+
+int phoneprofit(double profit);
+int accessorypr(double acc);
+int newlines(int newl);
+int pbhtotal(int pbh);
+int ins(int insurance_quantity);
+
+
+int main()
+{
+    double phone_profit, accessory;
+    int new_lines, pbh, insurance;
+    double sum;
+
+    cout<< "Total Phone profit for the month? $";
+    cin>>phone_profit;
+    cout<<endl<<"Accessory Profit: $";
+    cin>>accessory;
+    cout<<endl<<"Total PBH: ";
+    cin>>pbh;
+    cout<<endl<<"Total new lines: ";
+    cin>>new_lines;
+    cout<<endl<<"Total insurance packages sold: ";
+    cin>>insurance;
+    cout<<endl<<endl<< "The total commission for this month is: $";
+    sum=phoneprofit(phone_profit)+accessorypr(accessory)+newlines(new_lines)+pbhtotal(pbh)+ins(insurance);
+    cout<<sum;
+
+    return 0;
+}
+
+int phoneprofit(double profit)
+{
+    profit = profit*0.05;
+    return profit;
+}
+int accessorypr(double acc)
+{
+    acc = acc*.10;
+    return acc;
+}
+int newlines(int newl)
+{
+    newl = newl*10;
+    return newl;
+}
+int pbhtotal(int pbh)
+{
+    pbh = pbh*20;
+    return pbh;
+}
+int ins(int insurance_quantity)
+{
+    insurance_quantity=insurance_quantity*10;
+    return insurance_quantity;
+}
